@@ -50,108 +50,89 @@ cd CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application
 
 Before running the project, ensure that you have completed the following configuration steps:
 
-PS : this is a global view of the pipeline : 
-![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/9d97b0ac-72f7-4173-aa41-e55e8ab09526)
-
-
 1. **Database Configuration:**
-
    - Create a MySQL database for the application.
    - Update the `application.properties` file located in the `src/main/resources` directory with your database credentials:
-
      ```properties
      spring.datasource.url=jdbc:mysql://(MYSQL_CONTAINER_NAME):3306/your_database
      spring.datasource.username=your_username
      spring.datasource.password=your_password
      ```
-  - PS : Change MYSQL_CONTAINER_NAME with same name of the container hosting the sql server . 
+   - PS: Change MYSQL_CONTAINER_NAME with the same name of the container hosting the SQL server.
 
 2. **Jenkins Configuration:**
-
    - Set up a Jenkins instance and create a new pipeline for this project.
-   - You can follow regular installations methods for Jenkins, Java , Maven
-   - Configure a new Jenkins Pipeline, ensure that your script contains the necessary stages, steps, and any necessary environment variables based on your need.
-
-
-      ```groovy
-         stage('Checkout') {
-      steps {
-        script {
-            checkout([
-                $class: 'GitSCM',
-                branches: [[name: 'YOU_BRANCH_NAME']], 
-                userRemoteConfigs: [[url: 'YOUR_GITHUB_URL', credentialsId: 'github']]
-            ])
-        }
-          }}
-      ```
-  - PS : Change YOUR_BRANCH_NAME by the name of your current branch and YOUR_GITHUB_URL by your repository url.
-
-  - Clean and build the spring boot project 
+   - Follow regular installation methods for Jenkins, Java, and Maven.
+   - Configure a new Jenkins Pipeline with the necessary stages, steps, and environment variables:
      ```groovy
-        stage('Clean and Build') {
-            steps {
-                script {
-                    dir('DevOps_Project') {
-                        sh 'mvn clean package  -Dmaven.test.skip=true '
-                        sh 'mvn package -DskipTests'
-                        
-                    }
-                }
-            }
-        }
-      ```
-
-   - Prepare metrics by adding test stage :
+     stage('Checkout') {
+         steps {
+             script {
+                 checkout([
+                     $class: 'GitSCM',
+                     branches: [[name: 'YOU_BRANCH_NAME']], 
+                     userRemoteConfigs: [[url: 'YOUR_GITHUB_URL', credentialsId: 'github']]
+                 ])
+             }
+         }
+     }
+     ```
+     - PS: Change YOUR_BRANCH_NAME with the name of your current branch and YOUR_GITHUB_URL with your repository URL.
+     - Clean and build the Spring Boot project:
      ```groovy
-       stage('Build and Test') {
-            steps {
-          script {
-                    dir('Backend') {
-                sh 'mvn clean test'
-                sh 'mvn jacoco:report'
-                        
-                    }
-            }}
-        }
+     stage('Clean and Build') {
+         steps {
+             script {
+                 dir('DevOps_Project') {
+                     sh 'mvn clean package  -Dmaven.test.skip=true '
+                     sh 'mvn package -DskipTests'
+                 }
+             }
+         }
+     }
+     ```
+     - Prepare metrics by adding a test stage:
+     ```groovy
+     stage('Build and Test') {
+         steps {
+             script {
+                 dir('Backend') {
+                     sh 'mvn clean test'
+                     sh 'mvn jacoco:report'
+                 }
+             }
+         }
+     }
+     ```
 
-      ```
- 
-     
 3. **SonarQube Configuration:**
-
-   - SonarQube is beign also hosted on a separate container. check docker-compose file inside the monitoring-stack folder for more informations.  
+   - SonarQube is being hosted on a separate container (check docker-compose file inside the monitoring-stack folder for more information).
    - Configure the `sonar-project.properties` file in the root of your project with the appropriate SonarQube server information:
-
      ```properties
      sonar.host.url=http://your-sonarqube-server:9000
      sonar.login=your-sonar-token
      ```
-   - Aternatively , you can add a specific token to your jenkins credentials.
-  
-      ```groovy  
-        stage('Static Code Analysis') {
-            environment {
-                SONAR_URL = "YOUR_IP:9000"
-            }
-            steps {
-                dir('Backend') {
-                    withCredentials([string(credentialsId: 'CREDENTIAL_ID', variable: 'SONAR_AUTH_TOKEN')]) {
-                        sh 'mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
-                    }
-                }
-            }
-        }    
-        ```
-      - Make sure to change the script based on your configuration.
-    
-     
+   - Alternatively, you can add a specific token to your Jenkins credentials.
+   - Add a SonarQube stage to your Jenkins pipeline script:
+     ```groovy  
+     stage('Static Code Analysis') {
+         environment {
+             SONAR_URL = "YOUR_IP:9000"
+         }
+         steps {
+             dir('Backend') {
+                 withCredentials([string(credentialsId: 'CREDENTIAL_ID', variable: 'SONAR_AUTH_TOKEN')]) {
+                     sh 'mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+                 }
+             }
+         }
+     }
+     ```
+     - Make sure to change the script based on your configuration.
 
 4. **Nexus Configuration:**
-
-   - Nexus is beign also hosted on a separate container. check docker-compose file inside the monitoring-stack folder for more informations.  
-   - Update the `pom.xml` file with the Nexus repository information for Maven dependencies based on your configuration.
-
+   - Nexus is being hosted on a separate container (check docker-compose file inside the monitoring-stack folder for more information).
+   - Update the `pom.xml` file with the Nexus repository information for Maven dependencies based on your configuration:
      ```xml
      <distributionManagement>
          <repository>
@@ -160,30 +141,23 @@ PS : this is a global view of the pipeline :
          </repository>
      </distributionManagement>
      ```
-   - Finaly , you can add this stage to your pipeline script.
-  
-      ```groovy  
-       stage('Deploy artifact to Nexus') {
-      steps {
-      dir('Backend') {
-                         sh 'mvn deploy -DskipTests'               
-                        
-                    }
-      }
-      
-            
-    
-        ```
+   - Finally, add a Deploy artifact to Nexus stage to your pipeline script:
+     ```groovy  
+     stage('Deploy artifact to Nexus') {
+         steps {
+             dir('Backend') {
+                 sh 'mvn deploy -DskipTests'               
+             }
+         }
+     }
+     ```
 
 5. **Prometheus and Grafana Configuration:**
-
    - Use the provided Docker Compose file in the `monitoring` directory to start Prometheus and Grafana containers:
-
      ```bash
      cd monitoring
      docker-compose up -d
      ```
-
    - Access Grafana at http://localhost:3000 and set up Prometheus as a data source.
 
 These configuration steps ensure that your Spring Boot Angular application integrates seamlessly with the specified tools and services. Adjust the configurations based on your environment and requirements.
