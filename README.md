@@ -94,7 +94,7 @@ Before running the project, ensure that you have completed the following configu
      stage('Clean and Build') {
          steps {
              script {
-                 dir('DevOps_Project') {
+                 dir('Backend') {
                      sh 'mvn clean package  -Dmaven.test.skip=true '
                      sh 'mvn package -DskipTests'
                  }
