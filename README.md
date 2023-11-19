@@ -136,6 +136,7 @@ Before running the project, ensure that you have completed the following configu
      ```
      - Make sure to change the script based on your configuration.
 
+     - You should have the following analysis on your sonarqube projects section
 
     ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/1c126f18-0fd8-4623-9391-c62d4e0b9864)
 
@@ -160,17 +161,23 @@ Before running the project, ensure that you have completed the following configu
          }
      }
      ```
+    - You should have your spring boot JAR uploaded to your nexus repository.
+     ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/a07450ce-edb1-4f93-b23f-64ef52da1851)
+
 
 5. **Prometheus and Grafana Configuration:**
-   - Use the provided Docker Compose file in the `monitoring` directory to start Prometheus and Grafana containers:
-     ```bash
-     cd monitoring
-     docker-compose up -d
-     ```
-   - Access Grafana at http://localhost:3000 and set up Prometheus as a data source.
+   - Use the provided Docker Compose file in the `monitoring` directory to also start Prometheus and Grafana containers , also consider adding services for cadvisor , redis etc ... 
+   - Access Grafana at http://YOURIP:3000 and set up Prometheus as a data source.
+   - PS : configure the jobs either by editing the file inside the container prometheus/prometheus.yml or by editing the file located at the same location with the compose file .
 
 These configuration steps ensure that your Spring Boot Angular application integrates seamlessly with the specified tools and services. Adjust the configurations based on your environment and requirements.
 
+  
+  -To make sure you have efficiently synchronized your metrics with the prometheus data sure , you should have a similar prometheus target section : 
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/c1d69540-5177-495b-905f-e5e584274631)
+
+
+  
 Development
 Provide details about the development environment and any relevant information for developers.
 
