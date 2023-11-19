@@ -220,14 +220,6 @@ These configuration steps ensure that your Spring Boot Angular application integ
   ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6c618b8b-d543-433e-905a-2a5ab7bc9836)
 
 
-PS:
-    - Since the backend data would be stored inside the volume of our mysql container , we should spec our tables this way :
-      
-   ![Capture](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/008e88f6-1606-4fb5-bd4d-32a347b3d420)
-
-    
-  - To increase your code coverage, consider adding more test unit classes inside Backend/src/test.
-
  
 MIT License
 
