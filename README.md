@@ -68,6 +68,9 @@ Before running the project, ensure that you have completed the following configu
      spring.datasource.password=your_password
      ```
    - PS: Change MYSQL_CONTAINER_NAME with the same name of the container hosting the SQL server.
+    - Since the backend data would be stored inside the volume of our mysql container , we should spec our tables this way :
+    ![Capture](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/008e88f6-1606-4fb5-bd4d-32a347b3d420)
+
 
 2. **Jenkins Configuration:**
    - Set up a Jenkins instance and create a new pipeline for this project.
