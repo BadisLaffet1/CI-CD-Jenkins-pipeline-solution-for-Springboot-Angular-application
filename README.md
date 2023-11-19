@@ -72,9 +72,10 @@ PS : this is a global view of the pipeline :
    - You can follow regular installations methods for Jenkins, Java , Maven
    - Configure a new Jenkins Pipeline, ensure that your script contains the necessary stages, steps, and any necessary environment variables based on your need.
 
-     ```groovy
-  stage('Checkout') {
-    steps {
+
+      ```groovy
+         stage('Checkout') {
+      steps {
         script {
             checkout([
                 $class: 'GitSCM',
@@ -82,9 +83,8 @@ PS : this is a global view of the pipeline :
                 userRemoteConfigs: [[url: 'YOUR_GITHUB_URL', credentialsId: 'github']]
             ])
         }
-    }
-}
-     ```
+          }}
+      ```
   - PS : Change YOUR_BRANCH_NAME by the name of your current branch and YOUR_GITHUB_URL by your repository url.
 
   - Clean and build the spring boot project 
