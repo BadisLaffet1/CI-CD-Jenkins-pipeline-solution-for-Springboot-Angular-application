@@ -142,7 +142,8 @@ Before running the project, ensure that you have completed the following configu
 
      - You should have the following analysis on your sonarqube projects section
 
-    ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/1c126f18-0fd8-4623-9391-c62d4e0b9864)
+    ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/c48b024b-fe3c-4ba6-8477-2a282bd8d20e)
+
 
 4. **Nexus Configuration:**
    - Nexus is being hosted on a separate container (check docker-compose file inside the monitoring-stack folder for more information).
@@ -167,7 +168,7 @@ Before running the project, ensure that you have completed the following configu
      ```
     - You should have your spring boot JAR uploaded to your nexus repository.
       
-     ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/a07450ce-edb1-4f93-b23f-64ef52da1851)
+    ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/dfb914cf-ecb6-43be-a69c-ff98a70d7a9d)
 
 
 
@@ -190,7 +191,7 @@ Before running the project, ensure that you have completed the following configu
 
    - After this stage , you should have these containers with running status :
   
-  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6cedcb6f-54f4-4e62-be89-7841a474a4e6)
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/1c560ea1-8f30-4361-a053-aeb04dd27a5d)
 
 
 
@@ -225,18 +226,7 @@ MIT License
 
 Copyright (c) 2023 Badis Laffet
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
