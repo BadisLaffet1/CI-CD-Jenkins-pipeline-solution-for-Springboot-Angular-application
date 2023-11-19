@@ -211,7 +211,7 @@ These configuration steps ensure that your Spring Boot Angular application integ
 
    - After this stage , you should have these containers with running status :
   
-    ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/b4e1e49d-7b50-4104-bcc5-de6bae362a95)
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6cedcb6f-54f4-4e62-be89-7841a474a4e6)
 
 
  
