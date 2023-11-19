@@ -215,43 +215,24 @@ These configuration steps ensure that your Spring Boot Angular application integ
 
 
  
-Development
-Provide details about the development environment and any relevant information for developers.
+MIT License
 
-Built With
-List the main technologies, frameworks, and tools used in your project.
+Copyright (c) [year] [fullname]
 
-Spring Boot
-Angular
-MySQL
-Running Locally
-Provide instructions on how to run the project locally for development purposes.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-bash
-Copy code
-# Build and run the Spring Boot application
-./mvnw spring-boot:run
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-# Navigate to the Angular project folder
-cd frontend
-
-# Install dependencies and run the Angular application
-npm install
-ng serve
-Continuous Integration
-Explain how the Jenkins pipeline is set up for continuous integration.
-
-Code Quality
-Describe how SonarQube is integrated to ensure code quality.
-
-Artifact Repository
-Explain how Nexus is used as an artifact repository for managing dependencies.
-
-Monitoring
-Provide information on how Prometheus and Grafana are set up for monitoring and visualizing metrics.
-
-Contributing
-Explain how others can contribute to your project. Include guidelines for pull requests, coding standards, and any other relevant information.
-
-License
-Specify the license under which your project is distributed.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
