@@ -194,7 +194,7 @@ Before running the project, ensure that you have completed the following configu
 
    - After this stage , you should have these containers with running status :
   
-  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/1c560ea1-8f30-4361-a053-aeb04dd27a5d)
+  ![Capture9](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/d284d912-757a-4868-be1b-cf48c5026600)
 
 
 
