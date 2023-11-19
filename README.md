@@ -117,7 +117,7 @@ Before running the project, ensure that you have completed the following configu
      ```
 
 3. **SonarQube Configuration:**
-   - SonarQube is being hosted on a separate container (check docker-compose file inside the monitoring-stack folder for more information).
+   - SonarQube is being hosted on a container (check docker-compose file inside the monitoring-stack folder).
    - Configure the `sonar-project.properties` file in the root of your project with the appropriate SonarQube server information:
      ```properties
      sonar.host.url=http://your-sonarqube-server:9000
