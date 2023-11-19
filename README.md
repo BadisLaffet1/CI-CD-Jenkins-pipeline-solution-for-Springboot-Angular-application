@@ -1,6 +1,6 @@
 # CI/CD Jenkins Pipeline Solution for Spring Boot Angular Application
 
-This repository houses a robust CI/CD solution leveraging Jenkins pipelines for seamless integration and deployment of a Spring Boot Angular application. The project includes a MySQL database and is integrated with Jenkins, SonarQube, Nexus, Prometheus, and Grafana.
+Based on various DevOps best practices, this repository houses a robust CI/CD solution leveraging Jenkins pipelines for seamless integration and deployment of a Spring Boot Angular application. The project includes a MySQL database and is integrated with Jenkins, SonarQube, Nexus, Prometheus, and Grafana.
 
 ## Table of Contents
 
