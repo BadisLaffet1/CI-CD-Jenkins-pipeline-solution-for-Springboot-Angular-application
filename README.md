@@ -130,6 +130,9 @@ Before running the project, ensure that you have completed the following configu
      ```
      - Make sure to change the script based on your configuration.
 
+
+    ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/1c126f18-0fd8-4623-9391-c62d4e0b9864)
+
 4. **Nexus Configuration:**
    - Nexus is being hosted on a separate container (check docker-compose file inside the monitoring-stack folder for more information).
    - Update the `pom.xml` file with the Nexus repository information for Maven dependencies based on your configuration:
