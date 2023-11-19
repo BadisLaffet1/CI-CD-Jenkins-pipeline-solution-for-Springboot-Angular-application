@@ -162,6 +162,7 @@ Before running the project, ensure that you have completed the following configu
      }
      ```
     - You should have your spring boot JAR uploaded to your nexus repository.
+      
      ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/a07450ce-edb1-4f93-b23f-64ef52da1851)
 
 
@@ -174,8 +175,21 @@ These configuration steps ensure that your Spring Boot Angular application integ
 
   
   -To make sure you have efficiently synchronized your metrics with the prometheus data sure , you should have a similar prometheus target section : 
+
   ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/c1d69540-5177-495b-905f-e5e584274631)
 
+  -In final step , access your Grafana interface , add prometheus datasource , and start configuring dashboards based on your preference . 
+
+  -The following examples of dashboards that i have integrated to the project : 
+
+  Spring APM
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/abd8e39e-3d31-4769-9b16-fa91353a409e)
+
+  Docker container & host metrics 
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/da2a82e7-b622-4295-8d19-c9e74cecb2bc)
+
+  Jenkins performance and health overview
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6c618b8b-d543-433e-905a-2a5ab7bc9836)
 
   
 Development
