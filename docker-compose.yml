@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+ mysql:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: root
+    ports:
+      - "3306:3306"
+    networks:
+      - myappNetwork
+    volumes:
+      - mysql-data:/var/lib/mysql
+    
+
+   # Spring Boot service
+ springboot-app:
+    image: badislaffet1/pipe_spring-app:latest
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql
+    networks:
+      - myappNetwork
+      
+
+  # Angular app service
+ angular-app:
+    image: angularfront:latest
+    ports:
+      - "4200:4200"
+    depends_on:
+      - springboot-app
+    networks:
+      - myappNetwork
+
+networks:
+  myappNetwork:
+  
+
+volumes:
+  mysql-data:

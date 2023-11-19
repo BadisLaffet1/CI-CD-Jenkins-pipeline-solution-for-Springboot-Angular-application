@@ -1,0 +1,76 @@
+version: '3'
+
+services:
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqubeContainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+
+  nexus:
+    image: sonatype/nexus3:latest
+    container_name: nexusContainer
+    ports:
+      - "8081:8081"
+    volumes:
+      - nexus-data:/nexus-data
+
+  cadvisor:
+    container_name: cadvisorContainer
+    image: gcr.io/cadvisor/cadvisor:latest
+    ports:
+      - "8086:8080"
+    volumes: 
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev/disk/:/dev/disk   
+    depends_on: 
+    - redis
+
+    
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+    - 6379:6379
+
+
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    ports:
+       - "9090:9090"
+    command:
+       - "--config.file=/etc/prometheus/prometheus.yml"
+    volumes:
+       - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+       - cadvisor
+  
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - 3000:3000
+    restart: unless-stopped
+    volumes:
+      - ./grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - grafana-data:/var/lib/grafana
+    depends_on:
+         - prometheus
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:  
+  nexus-data:
+  grafana-data:
+   
+
