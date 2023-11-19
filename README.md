@@ -39,10 +39,10 @@ Provide instructions on how to install and configure the project dependencies.
 bash
 Copy code
 # Clone the repository
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application.git
 
 # Change directory
-cd your-repository
+cd CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application
 Configuration
 Explain any configuration steps that users need to perform, such as setting up environment variables, configuring database connections, etc.
 
