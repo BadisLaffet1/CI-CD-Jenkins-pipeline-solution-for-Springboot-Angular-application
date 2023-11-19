@@ -38,6 +38,11 @@ Follow these steps to set up and run the project.
 
 ### Installation
 
+
+This is the final stage view of our pipeline
+![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/f44a3d8f-65e6-44cc-9ac7-6863a36fe7b1)
+
+
 Clone the repository:
 
 ```bash
@@ -47,6 +52,7 @@ git clone https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Sp
 cd CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application
 ```
 ## Configuration
+
 
 Before running the project, ensure that you have completed the following configuration steps:
 
