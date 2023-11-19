@@ -201,7 +201,9 @@ Before running the project, ensure that you have completed the following configu
 6. **Prometheus and Grafana Configuration:**
    - Use the provided Docker Compose file in the `monitoring` directory to also start Prometheus and Grafana containers , also consider adding services for cadvisor , redis etc ... 
    - Access Grafana at http://YOURIP:3000 and set up Prometheus as a data source.
-   - PS : configure the jobs either by editing the file inside the container prometheus/prometheus.yml or by editing the file located at the same location with the compose file .
+   - PS :
+     - Configure the jobs by editing the file monitoring-stack/prometheus.yml, this file was configured for prometheus service using docker compose .
+    
 
 These configuration steps ensure that your Spring Boot Angular application integrates seamlessly with the specified tools and services. Adjust the configurations based on your environment and requirements.
 
