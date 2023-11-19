@@ -43,7 +43,7 @@ Follow these steps to set up and run the project.
 
 
 This is the final stage view of our pipeline
-![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/f44a3d8f-65e6-44cc-9ac7-6863a36fe7b1)
+![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/8eca2c66-446b-4e02-a6b6-d5acfdbe5522)
 
 
 Clone the repository:
