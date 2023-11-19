@@ -37,14 +37,15 @@ Ensure you have the following software and tools installed before setting up and
 
 ## Getting Started
 
+This is the stage view of the example pipeline
+![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/8eca2c66-446b-4e02-a6b6-d5acfdbe5522)
+
+
+
+
 Follow these steps to set up and run the project.
 
 ### Installation
-
-
-This is the final stage view of our pipeline
-![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/8eca2c66-446b-4e02-a6b6-d5acfdbe5522)
-
 
 Clone the repository:
 
@@ -223,7 +224,7 @@ These configuration steps ensure that your Spring Boot Angular application integ
 
 
 PS: 
-Since our sql server is hosted on particular container, we can spec our data base using this way : 
+Since the sql server is hosted on particular container, we can spec the data base using this way : 
 ![Capture](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6f3452de-14ca-48da-9ce0-6a83518d7123)
 
 
