@@ -167,7 +167,30 @@ Before running the project, ensure that you have completed the following configu
 
 
 
-5. **Prometheus and Grafana Configuration:**
+ 5. **Deploy application :**
+   - Use the provided Docker Compose file in the main directory to start mysql, spring boot app and the angular front app.
+     ```groovy  
+     stage('deploy application') {
+            steps{
+               script {
+          dir('.') {
+                    sh "docker compose up -d"
+              }}
+            }
+        }
+
+     }
+     ```
+
+
+
+   - After this stage , you should have these containers with running status :
+  
+  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6cedcb6f-54f4-4e62-be89-7841a474a4e6)
+
+
+
+6. **Prometheus and Grafana Configuration:**
    - Use the provided Docker Compose file in the `monitoring` directory to also start Prometheus and Grafana containers , also consider adding services for cadvisor , redis etc ... 
    - Access Grafana at http://YOURIP:3000 and set up Prometheus as a data source.
    - PS : configure the jobs either by editing the file inside the container prometheus/prometheus.yml or by editing the file located at the same location with the compose file .
@@ -192,32 +215,11 @@ These configuration steps ensure that your Spring Boot Angular application integ
   Jenkins performance and health overview
   ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6c618b8b-d543-433e-905a-2a5ab7bc9836)
 
- 6. **Deploy application :**
-   - Use the provided Docker Compose file in the main directory to start mysql, spring boot app and the angular front app.
-     ```groovy  
-     stage('deploy application') {
-            steps{
-               script {
-          dir('.') {
-                    sh "docker compose up -d"
-              }}
-            }
-        }
-
-     }
-     ```
-
-
-
-   - After this stage , you should have these containers with running status :
-  
-  ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6cedcb6f-54f4-4e62-be89-7841a474a4e6)
-
 
  
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2023 Badis Laffet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
