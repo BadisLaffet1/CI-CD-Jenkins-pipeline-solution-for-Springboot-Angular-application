@@ -222,6 +222,10 @@ These configuration steps ensure that your Spring Boot Angular application integ
 ![Capture7](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/a05fbf15-e705-493e-8873-6e586ab47a67)
 
 
+PS: 
+Since our sql server is hosted on particular container, we can spec our data base using this way : 
+![Capture](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6f3452de-14ca-48da-9ce0-6a83518d7123)
+
 
  
 MIT License
