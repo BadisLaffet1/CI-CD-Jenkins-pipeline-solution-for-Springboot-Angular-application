@@ -166,6 +166,7 @@ Before running the project, ensure that you have completed the following configu
      ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/a07450ce-edb1-4f93-b23f-64ef52da1851)
 
 
+
 5. **Prometheus and Grafana Configuration:**
    - Use the provided Docker Compose file in the `monitoring` directory to also start Prometheus and Grafana containers , also consider adding services for cadvisor , redis etc ... 
    - Access Grafana at http://YOURIP:3000 and set up Prometheus as a data source.
@@ -191,7 +192,29 @@ These configuration steps ensure that your Spring Boot Angular application integ
   Jenkins performance and health overview
   ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/6c618b8b-d543-433e-905a-2a5ab7bc9836)
 
+ 6. **Deploy application :**
+   - Use the provided Docker Compose file in the main directory to start mysql, spring boot app and the angular front app.
+     ```groovy  
+     stage('deploy application') {
+            steps{
+               script {
+          dir('.') {
+                    sh "docker compose up -d"
+              }}
+            }
+        }
+
+     }
+     ```
+
+
+
+   - After this stage , you should have these containers with running status :
   
+    ![image](https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application/assets/125974896/b4e1e49d-7b50-4104-bcc5-de6bae362a95)
+
+
+ 
 Development
 Provide details about the development environment and any relevant information for developers.
 
