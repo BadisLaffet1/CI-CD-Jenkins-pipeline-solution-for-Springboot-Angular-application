@@ -1,48 +1,49 @@
-# CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application
-This repository houses a robust CI/CD solution leveraging Jenkins pipelines for seamless integration and deployment of a Spring Boot Angular application.With integrated tools; 
+# CI/CD Jenkins Pipeline Solution for Spring Boot Angular Application
 
-Overview
-Provide a brief description of your project, including its purpose and main features. Mention that it's a Spring Boot Angular application with a MySQL database and integrated with Jenkins, SonarQube, Nexus, Prometheus, and Grafana.
+This repository houses a robust CI/CD solution leveraging Jenkins pipelines for seamless integration and deployment of a Spring Boot Angular application. The project includes a MySQL database and is integrated with Jenkins, SonarQube, Nexus, Prometheus, and Grafana.
 
-Table of Contents
-Prerequisites
-Getting Started
-Installation
-Configuration
-Development
-Built With
-Running Locally
-Continuous Integration
-Code Quality
-Artifact Repository
-Monitoring
-Contributing
-License
-Prerequisites
-List the software and tools that users need to have installed before setting up and running your project. Include links to the official documentation or download pages.
+## Table of Contents
 
-Java Development Kit (JDK)
-Node.js
-MySQL Database
-Docker
-Jenkins
-SonarQube
-Nexus Repository Manager
-Prometheus
-Grafana
-Getting Started
-Explain the steps users need to follow to set up and run your project.
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+- [Development](#development)
+  - [Built With](#built-with)
+  - [Running Locally](#running-locally)
+- [Continuous Integration](#continuous-integration)
+- [Code Quality](#code-quality)
+- [Artifact Repository](#artifact-repository)
+- [Monitoring](#monitoring)
+- [Contributing](#contributing)
+- [License](#license)
 
-Installation
-Provide instructions on how to install and configure the project dependencies.
+## Prerequisites
 
-bash
-Copy code
-# Clone the repository
+Ensure you have the following software and tools installed before setting up and running the project. Links to official documentation or download pages are provided for reference.
+
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Node.js](https://nodejs.org/)
+- [MySQL Database](https://www.mysql.com/)
+- [Docker](https://www.docker.com/)
+- [Jenkins](https://www.jenkins.io/)
+- [SonarQube](https://www.sonarqube.org/)
+- [Nexus Repository Manager](https://www.sonatype.com/nexus/repository-oss)
+- [Prometheus](https://prometheus.io/)
+- [Grafana](https://grafana.com/)
+
+## Getting Started
+
+Follow these steps to set up and run the project.
+
+### Installation
+
+Clone the repository:
+
+```bash
 git clone https://github.com/BadisLaffet1/CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application.git
-
-# Change directory
 cd CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application
+
 Configuration
 Explain any configuration steps that users need to perform, such as setting up environment variables, configuring database connections, etc.
 
