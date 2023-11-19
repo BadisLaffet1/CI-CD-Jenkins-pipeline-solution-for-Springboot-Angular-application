@@ -4,19 +4,42 @@ This repository houses a robust CI/CD solution leveraging Jenkins pipelines for 
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-- [Development](#development)
-  - [Built With](#built-with)
-  - [Running Locally](#running-locally)
-- [Continuous Integration](#continuous-integration)
-- [Code Quality](#code-quality)
-- [Artifact Repository](#artifact-repository)
-- [Monitoring](#monitoring)
-- [Contributing](#contributing)
+- [Installation](#installation)
+  - [Clone the Repository](#clone-the-repository)
+
+- [Configuration](#configuration)
+  - [Database Configuration](#database-configuration)
+    - [Create MySQL Database](#create-mysql-database)
+    - [Update `application.properties` for Database](#update-applicationproperties-for-database)
+  - [Jenkins Configuration](#jenkins-configuration)
+    - [Set up Jenkins Instance](#set-up-jenkins-instance)
+    - [Create Jenkins Pipeline](#create-jenkins-pipeline)
+    - [Configure Jenkins Pipeline Stages](#configure-jenkins-pipeline-stages)
+  - [SonarQube Configuration](#sonarqube-configuration)
+    - [Configure `sonar-project.properties`](#configure-sonar-projectproperties)
+    - [Add SonarQube Stage to Jenkins Pipeline](#add-sonarqube-stage-to-jenkins-pipeline)
+  - [Nexus Configuration](#nexus-configuration)
+    - [Update `pom.xml` for Nexus Repository](#update-pomxml-for-nexus-repository)
+    - [Add Deploy Artifact to Nexus Stage to Jenkins Pipeline](#add-deploy-artifact-to-nexus-stage-to-jenkins-pipeline)
+  - [Deploy Application](#deploy-application)
+    - [Use Docker Compose File](#use-docker-compose-file)
+    - [Deploy Application Stage in Jenkins Pipeline](#deploy-application-stage-in-jenkins-pipeline)
+  - [Prometheus and Grafana Configuration](#prometheus-and-grafana-configuration)
+    - [Use Docker Compose File for Monitoring](#use-docker-compose-file-for-monitoring)
+    - [Set Up Prometheus and Grafana Containers](#set-up-prometheus-and-grafana-containers)
+    - [Configure Prometheus Targets](#configure-prometheus-targets)
+    - [Access Grafana and Configure Dashboards](#access-grafana-and-configure-dashboards)
+
+- [Examples and Integration](#examples-and-integration)
+  - [Prometheus Target Section](#prometheus-target-section)
+  - [Access Grafana Interface](#access-grafana-interface)
+  - [Examples of Integrated Dashboards](#examples-of-integrated-dashboards)
+    - [Spring APM](#spring-apm)
+    - [Docker Container & Host Metrics](#docker-container--host-metrics)
+    - [Jenkins Performance and Health Overview](#jenkins-performance-and-health-overview)
+
 - [License](#license)
+
 
 ## Prerequisites
 
