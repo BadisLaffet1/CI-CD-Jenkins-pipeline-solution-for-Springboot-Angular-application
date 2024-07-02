@@ -23,7 +23,7 @@ Based on various DevOps best practices, this repository houses a robust CI/CD so
 
 ## Prerequisites
 
-Ensure you have the following software and tools installed before setting up and running the project. Links to official documentation or download pages are provided for reference.
+We should have the following software and tools installed before setting up and running the project. Links to official documentation or download pages are provided for reference.
 
 - [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html)
 - [Node.js](https://nodejs.org/)
@@ -58,7 +58,7 @@ cd CI-CD-Jenkins-pipeline-solution-for-Springboot-Angular-application
 ## Configuration
 
 
-Before running the project, ensure that you have completed the following configuration steps:
+Before running the project, we sgiykd have completed the following configuration steps:
 
 1. **Database Configuration:**
    - Create a MySQL database for the application.
